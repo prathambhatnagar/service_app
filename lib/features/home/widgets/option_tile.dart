@@ -9,16 +9,20 @@ class OptionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Image.asset(height: 50, width: 50, imgSrc),
-          SizedBox(height: 6),
-          Text(label,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold))
-        ],
-      ),
+    return Column(
+      children: [
+        Column(
+          children: [
+            Image.asset(height: 35, width: 35, imgSrc),
+            SizedBox(height: 6),
+            Text(label,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.black87, fontWeight: FontWeight.w500))
+          ],
+        ),
+      ],
     );
   }
 }
